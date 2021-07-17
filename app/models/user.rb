@@ -1,4 +1,7 @@
 class User < ApplicationRecord
-  CITIES = [Tokyo, Osaka, Kyoto, Fukuoka, Sapporo, Hiroshima, Okayama, Nagano]
-  validates :location, inclusion: { in: CITIES }
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
 end

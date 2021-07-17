@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Creating products..."
+
+3.times do
+  Product.create(
+  name: "NEMO Forte 35 Sleeping Bag",
+  description: "Updated with ultralight, ultra-compressible FeatherCore™ synthetic insulation technology to provide an excellent blend of warmth, moisture resistance, comfort and packability",
+  price: 1000,
+  category: "Sleeping Bags",
+  picture: "https://thepillmagazine.com/contents/wp-content/uploads/2020/09/ColetteMcerney_Indiancreek_01-1330x888-1.jpg",
+)
+end
+

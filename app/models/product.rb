@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  CATEGORY = [Tent, Camp Kitchen, Sleeping Bags, Hammocks, Backpacks]
+  CATEGORY = ["Tent", "Camp Kitchen", "Sleeping Bags", "Hammocks"]
   belongs_to :user
   validates :name, presence: true
   validates :description, presence: true
