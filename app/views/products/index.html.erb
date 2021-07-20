@@ -1,3 +1,21 @@
+<<<<<<< HEAD
 <% @products.each do |product| %>
   <%= product.name %>
 <% end %>
+=======
+
+<div class="container">
+    <div class="row">
+        <h1>Results</h1>
+        <% if @query %>
+            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h1>
+        <% else %>
+            <h3>Showing all <%= Product.count %> products</h1>
+            <% @products.each do |product| %>
+                <%= product %>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+
+>>>>>>> d55e23eaeaf03c93477d8c25a3db4427d4fc12ef
