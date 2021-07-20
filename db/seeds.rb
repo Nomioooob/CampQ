@@ -1,5 +1,4 @@
-puts "Creating products..."
-
+# puts "Creating products..."
 require 'open-uri'
 Product.destroy_all
 User.destroy_all
