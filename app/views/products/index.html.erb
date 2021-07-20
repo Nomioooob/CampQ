@@ -6,7 +6,7 @@
         <% else %>
             <h3>Showing all <%= Product.count %> products</h1>
             <% @products.each do |product| %>
-                <%= product %>
+                <%= product.name %>
             <% end %>
         <% end %>
     </div>
