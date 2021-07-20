@@ -17,10 +17,12 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
+    @booking.update(booking_params)
+
+    redirect_to booking_path(@booking)
   end
 
   def destroy
