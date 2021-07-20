@@ -1,1 +1,15 @@
-<h1>Product Page</h1>
+<div class="container p-3">
+<h1> <%= @product.name %></h1>
+<div class="product-card d-flex justify-content-between">
+<img src=" <%= @product.picture %>"/>
+<div class="product-info p-3">
+<p><strong>About</strong></p>
+<p> <%= @product.description %><p>
+<p><strong>Price</strong></p>
+<p> <%= @product.price %>$<p>
+<div class="btn btn-primary">Rent</div>
+</div>
+</div>
+</div>
+
+
