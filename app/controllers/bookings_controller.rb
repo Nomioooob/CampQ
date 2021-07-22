@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
     authorize @booking
     if @booking.save
       redirect_to profile_path
-      # product_path(@product)
     else
       render 'new'
     end

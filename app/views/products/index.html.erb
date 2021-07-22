@@ -1,6 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <%= link_to "CampQ", root_path,  class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item">
+                <div class="justify-content-md-center">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Ex. Tent" style="font-style: italic" aria-label="Search" style="width: 300px;">
+                     
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="login">
+                        <%= link_to "Login", new_user_session_path, class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="register">
+                        <%= link_to "Sign Up", new_user_registration_path , class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         <h1>Results</h1>
+        <div class="content">
+            <% if @query %>
+            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h1>
+            <% else %>
+            <h3>Showing all <%= Product.count %> products</h1>
+            <% @products.each do |product| %>
+            <div class="cards">
+                <div class="card-category">
+                    <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+                    <figcaption>$<%= product.price %></figcaption>
+                </div>
         <% if @query %>
             <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
         <% else %>
@@ -10,6 +55,7 @@
                 <%= link_to product.name, product_path(product) %>
             </div>
             <% end %>
+        </div>
         <% end %>
         <hr>
       <%= link_to "Home", root_path,  class: "btn btn-primary" %>
