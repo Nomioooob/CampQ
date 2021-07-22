@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+  before_action :set_product, only: [:show, :destroy]
 
   def index
     if params[:query].present?
@@ -11,7 +12,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     authorize @product
   end
 
@@ -33,9 +33,16 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorize @product
+    @product.destroy
+    redirect_to products_path
   end
 
   private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
   def product_params
     params.require(:product).permit(:name, :description, :price, :picture, :category)
