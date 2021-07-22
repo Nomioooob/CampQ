@@ -1,7 +1,3 @@
-<% @products.each do |product| %>
-  <%= product %>
-<% end %>
-
 <div class="container">
     <div class="row">
         <h1>Results</h1>
@@ -12,11 +8,9 @@
             <% @products.each do |product| %>
             <div>
                 <%= product.name %>
-                <%= product.description %>
                 <%= product.price %>
             </div>
             <% end %>
         <% end %>
     </div>
 </div>
-

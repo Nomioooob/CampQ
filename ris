@@ -1,0 +1,25 @@
+=> [[32m#<Product:0x00007fcf6cf04310[0m
+  id: [1;34m1[0m,
+  name: [31m[1;31m"[0m[31mNEMO Forte 35 Sleeping Bag[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mUpdated with ultralight, ultra-compressible FeatherCore™ synthetic insulation technology to provide an excellent blend of warmth, moisture resistance, comfort and packability[1;31m"[0m[31m[0m,
+  price: [1;34m1000[0m,
+  picture: [31m[1;31m"[0m[31mhttps://source.unsplash.com/640x400/?sleepingbag[1;31m"[0m[31m[0m,
+  category: [31m[1;31m"[0m[31mSleeping Bags[1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m20[0m [1;34;4mJul[0m [1;34m2021[0m [1;34m12[0m:[1;34m38[0m:[1;34m25[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m20[0m [1;34;4mJul[0m [1;34m2021[0m [1;34m12[0m:[1;34m38[0m:[1;34m25[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Product:0x00007fcf6cf9acc0[0m
+  id: [1;34m2[0m,
+  name: [31m[1;31m"[0m[31mDominion 1p Ultralight Backpacking Tent[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mTapered Design creates more usable space so you can sit up and move around in the tent without feeling claustrophobic![1;31m"[0m[31m[0m,
+  price: [1;34m10000[0m,
+  picture: [31m[1;31m"[0m[31mhttps://source.unsplash.com/640x400/?tent[1;31m"[0m[31m[0m,
+  category: [31m[1;31m"[0m[31mTent[1;31m"[0m[31m[0m,
+  user_id: [1;34m2[0m,
+  created_at: [1;34;4mTue[0m, [1;34m20[0m [1;34;4mJul[0m [1;34m2021[0m [1;34m12[0m:[1;34m38[0m:[1;34m25[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m20[0m [1;34;4mJul[0m [1;34m2021[0m [1;34m12[0m:[1;34m38[0m:[1;34m25[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Product:0x00007fcf6cf9abf8[0m
+  id: [1;34m3[0m,
+  name: [31m[1;31m"[0m[31mHappybuy Portable Camping Kitchen[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mTired of windy nights flickering the flame? This camping kitchen is equipped with a pop-up windscreen to keep the wind out and the heat in, so your food will cook faster. [1;31m"[0m[31m[0m,
+  
