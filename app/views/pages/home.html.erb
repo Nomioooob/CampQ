@@ -1,35 +1,96 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <%= link_to "CampQ", root_path,  class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item">
+                <div class="justify-content-md-center">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Ex. Tent" style="font-style: italic" aria-label="Search" style="width: 300px;">
+                     
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="login">
+                        <%= link_to "Login", new_user_session_path, class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="register">
+                        <%= link_to "Sign Up", new_user_registration_path , class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="banner">
-    <h1>CampQ</h1>
-    <h3>Camping Gear Anywhere and Everywhere</h3>
+    <video autoplay muted loop id="myVideo">
+      <source src="#" type="video/mp4">
+    </video>
+    <div class="banner-brand">
+        <h1>CampQ</h1>
+        <h3>Camping Gear Anywhere and Everywhere</h3>
         <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
             <%= f.input :name, input_html: {value: ""} %>   
             <%= f.submit "Search", class: "btn btn-primary" %>
         <% end %>
+    </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="about">
-            <div class="about-section">
-                <h3>CampQ, a place where you can find and rent out all the essentials for camping</h3>
-            </div>
-            <div class="about-section">
-                <%# Some images %>
-            </div>
-        </div>
-        <div class="popular">
-            <div class="cards">
-                <div class="card-category">
-                    <%# Products %>
+        <section class="content">
+            <div class="about">
+                <div class="about-section col-6" id="about-campq">
+                    <h3>CampQ, a place where you can find and rent out all the essentials for camping</h3>
+                </div>
+                <div class="about-section col-6" id="about-images">
+                    <div class="about-images" id="about-img-1">
+                        <img src="https://media.istockphoto.com/videos/caucasian-family-enjoying-camping-vacation-together-america-forest-video-id1064300936?b=1&k=6&m=1064300936&s=640x640&h=FDXEN2wcisLz-IuKbWQXnUwsC4mybge1Lfom-EHMK7U=" alt="">
+                    </div>
+                    <div class="about-images" id="about-img-2">
+                        <img src="https://media.istockphoto.com/videos/caucasian-family-enjoying-camping-vacation-together-america-forest-video-id1064300936?b=1&k=6&m=1064300936&s=640x640&h=FDXEN2wcisLz-IuKbWQXnUwsC4mybge1Lfom-EHMK7U=" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer">
-            <%# Some footer %>
-        </div>
+        </section>
+        <section class="content">
+            <div class="popular">
+                <div class="">
+                    <div class="">
+                        <h3>Most Popular Camping Items</h3>
+                        <div>
+                            <img src="https://i.pinimg.com/736x/6b/89/62/6b8962e40904885a05eb4141e87b26c2.jpg" alt="">
+                        </div>
+                        <%# @products.each |product| do %>
+                            <%#= product.name %>
+                        <%# end %>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="search">
+                <h3>Search for that gear you've been looking for</h3>
+                <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+                    <%= f.input :name, input_html: {value: ""} %>   
+                    <%= f.submit "Search", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+        </section>
     </div>
-</div>
+        
+    <footer>
+        <h3>CampQ Footer</h3>
+    </footer>
 
-<div class="logo">
-    <p>TEST</p>
 </div>
     
