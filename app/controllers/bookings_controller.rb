@@ -3,16 +3,20 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @product = Product.find(params[:product_id])
     authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @user = current_user
+    @product = Product.find(params[:product_id])
+    @booking.product = @product
     @booking.user = @user
     authorize @booking
     if @booking.save
-      redirect_to product_path(@product)
+      redirect_to profile_path
+      # product_path(@product)
     else
       render 'new'
     end
