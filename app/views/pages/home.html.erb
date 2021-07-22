@@ -10,7 +10,7 @@
                 <div class="justify-content-md-center">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Ex. Tent" style="font-style: italic" aria-label="Search" style="width: 300px;">
-                     
+
                         <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
@@ -30,6 +30,7 @@
                 </div>
             </li>
         </ul>
+        <%= link_to "Browse all products", products_path,  class: "navbar-brand" %>
     </div>
 </nav>
 <div class="banner">
@@ -43,7 +44,7 @@
     <h1>CampQ</h1>
     <h3>Camping Gear Anywhere and Everywhere</h3>
         <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-            <%= f.input :name, input_html: {value: ""} %>   
+            <%= f.input :name, input_html: {value: ""} %>
             <%= f.submit "Search", class: "btn btn-primary" %>
         <% end %>
     </div>
@@ -84,7 +85,7 @@
             <div class="search">
                 <h3>Search for that gear you've been looking for</h3>
                 <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-                    <%= f.input :name, input_html: {value: ""} %>   
+                    <%= f.input :name, input_html: {value: ""} %>
                     <%= f.submit "Search", class: "btn btn-primary" %>
                 <% end %>
 </div>
@@ -106,7 +107,7 @@
             </div>
         </section>
     </div>
-        
+
     <footer>
         <h3>CampQ Footer</h3>
     </footer>
@@ -116,4 +117,3 @@
 <div class="logo">
     <p>TEST</p>
 </div>
-    
