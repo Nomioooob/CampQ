@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 <% @products.each do |product| %>
   <%= product %>
 <% end %>
-=======
 
 <div class="container">
     <div class="row">
@@ -12,10 +10,13 @@
         <% else %>
             <h3>Showing all <%= Product.count %> products</h1>
             <% @products.each do |product| %>
-                <%= product %>
+            <div>
+                <%= product.name %>
+                <%= product.description %>
+                <%= product.price %>
+            </div>
             <% end %>
         <% end %>
     </div>
+  </div>
 </div>
-
->>>>>>> d55e23eaeaf03c93477d8c25a3db4427d4fc12ef

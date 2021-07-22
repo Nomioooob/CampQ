@@ -9,4 +9,7 @@ class PagesController < ApplicationController
       @products = Product.all
     end
   end
+
+  def profile
+  end
 end
