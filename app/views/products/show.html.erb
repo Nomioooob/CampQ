@@ -1,3 +1,9 @@
+<h1>Product Page</h1>
+<%= link_to product_path(@product),
+        method: :delete,
+        data: { confirm: "Are you sure?" }, class: "btn btn-warning"%>
+
+<%= link_to 'Products', products_path, class: "btn btn-primary" %>
 <nav class="flex-nav">
   <div class="container">
     <div class="grid menu">
@@ -83,7 +89,6 @@
     </div>
   </div>
 </main>
-=======
 <div class="container p-3">
   <h1> <%= @product.name %></h1>
   <div class="product-card d-flex justify-content-between">
