@@ -39,6 +39,9 @@
     <div class="banner-brand">
         <h1>CampQ</h1>
         <h3>Camping Gear Anywhere and Everywhere</h3>
+<div class="banner">
+    <h1>CampQ</h1>
+    <h3>Camping Gear Anywhere and Everywhere</h3>
         <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
             <%= f.input :name, input_html: {value: ""} %>   
             <%= f.submit "Search", class: "btn btn-primary" %>
@@ -84,6 +87,22 @@
                     <%= f.input :name, input_html: {value: ""} %>   
                     <%= f.submit "Search", class: "btn btn-primary" %>
                 <% end %>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="about">
+            <div class="about-section">
+                <h3>CampQ, a place where you can find and rent out all the essentials for camping</h3>
+            </div>
+            <div class="about-section">
+                <%# Some images %>
+            </div>
+        </div>
+        <div class="popular">
+            <div class="cards">
+                <div class="card-category">
+                    <%# Products %>
+                </div>
             </div>
         </section>
     </div>
@@ -92,5 +111,9 @@
         <h3>CampQ Footer</h3>
     </footer>
 
+</div>
+
+<div class="logo">
+    <p>TEST</p>
 </div>
     
