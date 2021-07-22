@@ -11,5 +11,6 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @bookings = Booking.all
   end
 end

@@ -52,11 +52,13 @@
             <h3>Showing all <%= Product.count %> products</h3>
             <% @products.each do |product| %>
             <div>
-                <%= product.name %>
-                <%= product.price %>
+                <%= link_to product.name, product_path(product) %>
             </div>
             <% end %>
         </div>
         <% end %>
+        <hr>
+      <%= link_to "Home", root_path,  class: "btn btn-primary" %>
+      <%= link_to "Profile", profile_path,  class: "btn btn-primary" %>
     </div>
 </div>
