@@ -1,14 +1,73 @@
 // Specific CSS for your home-page
-.about{
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+h1, h3{
+    font-family: 'Libre Baskerville', serif;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
-    margin-left: 180px;
+    width: 100vw !important;
 }
 
 .row{
     padding: 10px;
-    width: 85vw;
     display: block;
 }
+
+.content{
+    margin-top: 10rem;
+    contain: content;
+}
+
+.about{
+    display: flex;
+    height: 30vh;
+}
+
+.about-section{
+    line-height: 35px;
+}
+
+#popular-content{
+    background-color: #ede1b5;
+    height: 30vh;
+    margin-left: -22.5rem;
+    margin-right: -22.5rem;
+    justify-content: center;
+}
+
+#popular-header{
+    text-align: center;
+}
+
+.reviews{
+    display: flex;
+    .reviews-story {
+        
+    }
+    ul{
+        line-height: 30px;
+    }
+}
+
+.search{
+    text-align: center;
+    background-image: url(https://i.redd.it/6uihp6cqi0h61.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    #search-header, #browse-btn{
+        position: relative;
+        top: 50%;;
+    }
+    #search-header{
+        color: white;
+    }
+}
+
