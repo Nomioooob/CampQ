@@ -1,4 +1,18 @@
 .navbar{
   display: flex;
-  justify-content: space-evenly;
+}
+
+nav ul{
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item{
+  justify-content: space-between;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  gap: 15px;
 }
