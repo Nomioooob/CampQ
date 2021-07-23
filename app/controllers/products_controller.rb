@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_product, only: [:show, :destroy]
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :set_product, only: %i[show destroy]
 
   def index
     if params[:query].present?
@@ -47,5 +47,4 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :price, :picture, :category)
   end
-
 end

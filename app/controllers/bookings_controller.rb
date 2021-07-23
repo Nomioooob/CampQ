@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:edit, :update, :destroy]
+  before_action :set_booking, only: %i[edit update destroy]
 
   def new
     @booking = Booking.new
@@ -45,5 +45,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:date_start, :date_end, :status, :comment, :rating, :user, :product)
   end
-
 end
