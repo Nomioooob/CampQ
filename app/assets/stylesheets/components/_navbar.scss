@@ -1,7 +1,7 @@
 .navbar{
   display: flex;
+  transition: background-color 200ms linear;
   background-color: transparent;
-  transition: 1s;
 }
 
 .nav-btn-item{
@@ -26,4 +26,5 @@
 #dropdownMenuButton{
   background-color: white !important;
   border: none !important;
+  color: inherit;
 }
