@@ -66,8 +66,8 @@
                     <ul>
                       <li><b>Booking status: </b><%= booking.status %></li>
                       <li><b>Price: </b> ￥<%= booking.product.price %></li>
-                      <li><b>Starting Date: </b><%= booking.date_start %></li>
-                      <li><b>Ending Date: </b><%= booking.date_end %></li>
+                      <li><b>Starting Date: </b><%= booking.start_time %></li>
+                      <li><b>Ending Date: </b><%= booking.end_time %></li>
                     </ul>
                   <button class="btn py-3 mt-5">UPDATE</button>
                   <button class="btn py-3 mt-5" style="background:#FF9B26;"><%= link_to booking_path(booking),
