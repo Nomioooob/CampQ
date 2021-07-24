@@ -1,10 +1,11 @@
 .banner{
-    background-image: url(https://media.giphy.com/media/MYu6GttHVbr44/source.gif);
+    background-image: url(campfire.gif);
     background-size: cover;
     background-position: center;
     padding: 150px;
     height: 100vh;
     padding: 150px 0;
+
 
     h1 {
       margin: 0;
@@ -23,12 +24,4 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
       padding: 0 50px;
     }
-}
-
-.banner-video{
-  contain: content;
-  #myVideo{
-    height: 600px;
-    width: 600px;
-  }
 }

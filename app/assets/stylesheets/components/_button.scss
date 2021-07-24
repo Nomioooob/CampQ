@@ -1,0 +1,17 @@
+.btn{
+    border-radius: 3px;
+    box-shadow: 1px 1px grey;
+    :hover{
+        opacity: 1.0;
+    }
+}
+
+#browse-btn{
+    box-shadow: 1px 1px grey;
+    background-color: #006A4E;
+    color: white;
+    margin-left: 50px;
+    :hover{
+        opacity: 1.0;
+    }
+}
