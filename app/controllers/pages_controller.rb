@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @bookings = Booking.all
+    @user = User.find(params[:id])
+    # @bookings = Booking.where(user: @user, )
   end
 end
