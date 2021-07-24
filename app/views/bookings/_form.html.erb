@@ -1,5 +1,4 @@
 <%= simple_form_for [product, booking] do |f| %>
-
   <div class="d-flex justify-content-between py-3 m-3">
      <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
      <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
