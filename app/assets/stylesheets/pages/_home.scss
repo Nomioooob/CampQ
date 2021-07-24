@@ -1,14 +1,77 @@
 // Specific CSS for your home-page
-.about{
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+h1, h3{
+    font-family: 'Libre Baskerville', serif;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
-    margin-left: 180px;
+    width: 100vw !important;
+    overflow: visible;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(300px);
+    scroll-snap-type: y mandatory;
+}
+
+.banner, .container{
+    scroll-behavior: smooth;
 }
 
 .row{
     padding: 10px;
-    width: 85vw;
     display: block;
 }
+
+.about{
+    display: flex;
+    height: 30vh;
+    margin-top: 15rem;
+}
+
+.about-section{
+    line-height: 35px;
+}
+
+#about-camps{
+    margin-left: 50px;
+}
+
+#popular-content{
+    background-color: #ede1b5;
+    margin-left: -22.5rem;
+    margin-right: -22.5rem;
+    justify-content: center;
+}
+
+#popular-header{
+    text-align: center;
+}
+
+.reviews{
+    display: flex;
+    ul{
+        line-height: 30px;
+    }
+}
+
+.search{
+    text-align: center;
+    background-image: url(https://i.redd.it/6uihp6cqi0h61.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    #search-header, #browse-btn{
+        position: relative;
+        top: 50%;;
+    }
+    #search-header{
+        color: white;
+    }
+}
+

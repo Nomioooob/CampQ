@@ -1,4 +1,30 @@
 .navbar{
   display: flex;
-  justify-content: space-evenly;
+  transition: background-color 200ms linear;
+  background-color: transparent;
+}
+
+.nav-btn-item{
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item{
+  justify-content: space-between;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  gap: 15px;
+}
+
+.mr-sm-5, .mx-sm-5 {
+  margin-right: 2px !important;
+}
+
+#dropdownMenuButton{
+  background-color: white !important;
+  border: none !important;
+  color: inherit;
 }

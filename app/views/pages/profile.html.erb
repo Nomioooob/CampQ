@@ -1,6 +1,7 @@
-<h1>My profile</h1>
 
-<h1>My booking</h1>
+<!DOCTYPE html>
+  <html>
+    <head>
 
 <%= month_calendar(events: @bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
   <%= date %>
@@ -11,3 +12,94 @@
     </div>
   <% end %>
 <% end %>
+<!--TITLE-->
+      <title>Profile</title>
+<!--EXTERNAL CSS-->
+      <link rel="stylesheet" href="css/style.css">
+    </head>
+
+  <body>
+    <div class="container">
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        <strong>NOTE!</strong> Please verify your account. <a href="#" style="color:white;">Resend Verification Code</a>
+      </div>
+        <table>
+          <h1 style="text-align: center">Profile</h1>
+          <tr>
+            <td>
+              <section>
+                <label for="fileToUpload">
+                  <i class="fa fa-camera"></i>
+                  <input type="file" id="fileToUpload" style="visibility:hidden;" accept=".png,.jpg,jpeg,.PNG,.JPEG" name="fileToUpload" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                </label>
+                <img src="https://source.unsplash.com/a7PUubWEZEQ/600x400" id="blah" alt="Avatar">
+              </section>
+              <h1><% current_user.first_name %></h1>
+            </td>
+            <td>
+              <ul>
+                <li><b>Full name</b> <input type="text" name="fname" id="fname" maxlength="100" value="Shogo Miyagi" required /> <i class="fa fa-edit" id="edit1" onclick="document.getElementById('fname').style.pointerEvents='auto';document.getElementById('fname').focus();this.style.display='none'; document.getElementById('check1').style.display='inline-block';"></i> <i class="fa fa-check" style="display:none;" id="check1" onclick="document.getElementById('edit1').style.display='inline-block';this.style.display='none';document.getElementById('fname').style.pointerEvents='none';"></i></li>
+                <li><b>Email</b> <input type="email" name="email" id="email" maxlength="150" value="shogo@gmail.com" required /></li>
+                <li><b>Contact number</b> <input type="tel" name="mobile" id="mobile" maxlength="10" value="0123456789" required /> <i class="fa fa-edit" id="edit2" onclick="document.getElementById('mobile').style.pointerEvents='auto';document.getElementById('mobile').focus();this.style.display='none'; document.getElementById('check2').style.display='inline-block';"></i> <i class="fa fa-check" style="display:none;" id="check2" onclick="document.getElementById('edit2').style.display='inline-block';document.getElementById('mobile').style.pointerEvents='none';this.style.display='none';"></i></li>
+                <li><b>Address</b> <input type="text" name="address" id="address" maxlength="250" value="Tokyo, Japan" required /> <i class="fa fa-edit" id="edit3" onclick="document.getElementById('address').style.pointerEvents='auto';document.getElementById('address').focus();this.style.display='none'; document.getElementById('check3').style.display='inline-block';"></i> <i class="fa fa-check" style="display:none;" id="check3" onclick="document.getElementById('edit3').style.display='inline-block';document.getElementById('address').style.pointerEvents='none';this.style.display='none';"></i></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="section2">
+              <h2>Notifications</h2>
+              <ul>
+                <li>
+                  <hr>
+                  <p>Aidan has accepted your reservation request</p>
+                  <hr>
+              </ul>
+            </td>
+            <td class="inframe">
+              <h2>Bookings</h2>
+              <div class="card">
+                <img src="https://source.unsplash.com/KYTT8L5JLDs/" alt="NO PREVIEW" style="border-radius: 16px">
+                <section class="card_content">
+              <% @bookings.each do |booking| %>
+                  <h3><%= booking.product.name %></h3>
+                    <ul>
+                      <li><b>Booking status: </b><%= booking.status %></li>
+                      <li><b>Price: </b> ￥<%= booking.product.price %></li>
+                      <li><b>Starting Date: </b><%= booking.date_start %></li>
+                      <li><b>Ending Date: </b><%= booking.date_end %></li>
+                    </ul>
+                  <button class="btn py-3 mt-5">UPDATE</button>
+                  <button class="btn py-3 mt-5" style="background:#FF9B26;"><%= link_to booking_path(booking),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } do %>
+                      <i class="fas fa-trash-alt"></i>
+                      <% end %>DELETE　</button>
+                      <% end %>
+                </section>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <!--JAVASCRIPT-->
+      <script src="js/custom.js"></script>
+      <script>
+      function editdetails2(){
+      }
+
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,4 +1,7 @@
 .content{
     height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    margin-top: 10rem;
     contain: content;
 }
