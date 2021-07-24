@@ -2,19 +2,50 @@
   <div class="row">
     <h1>Products</h1>
       <div class="content">
-        <% if @query %>
-          <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
-          <% else %>
-          <h3>Showing all <%= Product.count %> products</h3>
+      <section>
+        <div style="display: flex;">
+          <h3>Filter</h3>
+          <button id="filter" type="button" data-toggle="collapse" data-target=".btns-filter"><i class="icon fas fa-chevron-down"></i></button>
+        </div>
+        <div>
+          <button class="btns-filter">Price</button>
+          <button class="btns-filter">Rating</button>
+          <button class="btns-filter">Location</button>
+        </div>
+      </section>
+      <% if @query %>
+        <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
+      <% else %>
+        <h3>Showing <%= Product.count %> products</h3>
+        <section class="product-cards">
           <% @products.each do |product| %>
-            <div class="cards">
-              <div class="card-category">
-                <figcaption><%= link_to product.name, product_path(product) %></figcaption>
-                <figcaption>$<%= product.price %></figcaption>
+              <div class="card-trip">
+                <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026540&id=1514376&recipeId=728" alt="">
+                <div class="card-trip-infos">
+                 <div>
+                   <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+                   <figcaption>$<%= product.price %></figcaption>
+                 </div>
+                </div>
               </div>
-            </div>
           <% end %>
-        <% end %>
-      </div>
+          <% end %>
+        </section>
+        
+  </div>
 </div>
 
+<script>
+    
+    const collapse_button = document.querySelector('#filter');
+    const collapse_icon = document.querySelector('.icon');
+        // console.log(collapse_icon);
+
+    collapse_button.addEventListener("click", (event) => {
+        if (collapse_icon.classList.contains('fa-chevron-down')) {
+            collapse_icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+            collapse_icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        };
+    });
+</script>
