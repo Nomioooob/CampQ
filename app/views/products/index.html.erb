@@ -10,7 +10,7 @@
                 <div class="justify-content-md-center">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Ex. Tent" style="font-style: italic" aria-label="Search" style="width: 300px;">
-                     
+
                         <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
@@ -33,32 +33,35 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row">
-        <h1>Results</h1>
-        <div class="content">
-            <% if @query %>
-            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h1>
-            <% else %>
-            <h3>Showing all <%= Product.count %> products</h1>
-            <% @products.each do |product| %>
-            <div class="cards">
-                <div class="card-category">
-                    <figcaption><%= link_to product.name, product_path(product) %></figcaption>
-                    <figcaption>$<%= product.price %></figcaption>
-                </div>
+  <div class="row">
+    <h1>Results</h1>
+      <div class="content">
         <% if @query %>
-            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
-        <% else %>
-            <h3>Showing all <%= Product.count %> products</h3>
-            <% @products.each do |product| %>
-            <div>
-                <%= link_to product.name, product_path(product) %>
+          <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
+          <% else %>
+          <h3>Showing all <%= Product.count %> products</h3>
+          <% @products.each do |product| %>
+            <div class="cards">
+              <div class="card-category">
+                <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+                <figcaption>$<%= product.price %></figcaption>
+              </div>
             </div>
-            <% end %>
-        </div>
+          <% end %>
         <% end %>
-        <hr>
-      <%= link_to "Home", root_path,  class: "btn btn-primary" %>
-      <%= link_to "Profile", profile_path,  class: "btn btn-primary" %>
-    </div>
+          <% if @query %>
+            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
+            <% else %>
+            <h3>Showing all <%= Product.count %> products</h3>
+              <% @products.each do |product| %>
+                <div>
+                  <%= link_to product.name, product_path(product) %>
+                </div>
+              <% end %>
+          <% end %>
+          <hr>
+          <%= link_to "Home", root_path,  class: "btn btn-primary" %>
+          <%= link_to "Profile", profile_path,  class: "btn btn-primary" %>
+      </div>
+  </div>
 </div>
