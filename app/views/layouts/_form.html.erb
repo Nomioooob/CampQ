@@ -1,9 +1,0 @@
-<%= simple_form_for product do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :category, collection: ["Tent", "Camp Kitchen", "Sleeping Bags", "Hammocks"], prompt: 'Select category', label: false %>
-  <%= f.input :picture, as: :file, label: "Upload picture(s) of your product" %>
-  <%= f.submit "Create listing", class: 'btn btn-primary' %>
-<% end %>
-

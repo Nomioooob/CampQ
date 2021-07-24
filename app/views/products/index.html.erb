@@ -1,17 +1,20 @@
 <div class="container">
-    <div class="row">
-        <h1>Results</h1>
+  <div class="row">
+    <h1>Products</h1>
+      <div class="content">
         <% if @query %>
-            <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h1>
-        <% else %>
-            <h3>Showing all <%= Product.count %> products</h1>
-            <% @products.each do |product| %>
-            <div>
-                <%= product.name %>
-                <%= product.description %>
-                <%= product.price %>
+          <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
+          <% else %>
+          <h3>Showing all <%= Product.count %> products</h3>
+          <% @products.each do |product| %>
+            <div class="cards">
+              <div class="card-category">
+                <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+                <figcaption>$<%= product.price %></figcaption>
+              </div>
             </div>
-            <% end %>
+          <% end %>
         <% end %>
-    </div>
+      </div>
 </div>
+

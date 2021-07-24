@@ -1,1 +1,52 @@
-<h1>My profile</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <%= link_to "CampQ", root_path,  class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item">
+                <div class="justify-content-md-center">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Ex. Tent" style="font-style: italic" aria-label="Search" style="width: 300px;">
+
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="login">
+                        <%= link_to "Login", new_user_session_path, class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="justify-content-md-end">
+                    <div class="register">
+                        <%= link_to "Sign Up", new_user_registration_path , class: "btn btn-success"%>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <%= link_to "Browse all products", products_path,  class: "navbar-brand" %>
+    </div>
+</nav><h1>My profile</h1>
+
+<h2>Your booking has been confirmed!🏕</h2>
+<h3>Showing all <%= Booking.count %> bookings</h3>
+  <% @bookings.each do |booking| %>
+    <li>
+        <%= booking.status %>
+        <%= booking.product.name %>
+        <%= booking.product.price %>
+        <%= booking.date_start %>
+        <%= booking.date_end %>
+        <%= link_to booking_path(booking),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do %>
+                    <i class="fas fa-trash-alt"></i>
+                    <% end %>
+    </li>
+  <% end %>
