@@ -1,9 +1,25 @@
 // Specific CSS for your home-page
+.container{
+    overflow: hidden;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(300px);
+    scroll-snap-type: y mandatory;
+}
+
+.banner, .container{
+    scroll-behavior: smooth;
+}
+
+.content{
+    overflow-y: scroll;
+    scroll-snap-align: start;
+}
+
 .about{
     display: flex;
 }
 
-.container{
+.content{
     margin-left: 180px;
 }
 
