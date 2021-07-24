@@ -11,8 +11,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @user = User.find(params[:id])
-    # @bookings = Booking.where(user: @user, )
-
+    @user = current_user
+    start_date = params.fetch(:start_date, Date.today).to_date
+    @bookings = Booking.where(user: @user, start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 end

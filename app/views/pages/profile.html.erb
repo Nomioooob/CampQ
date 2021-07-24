@@ -2,6 +2,12 @@
 
 <h1>My booking</h1>
 
-<%= month_calendar(attribute: :date_start, end_attribute: :date_end) do |date| %>
-  <%= date.day %>
+<%= month_calendar(events: @bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
+  <%= date %>
+
+  <% bookings.each do |booking| %>
+    <div class="booking">
+      <p><%= booking.product.name %></p>
+    </div>
+  <% end %>
 <% end %>
