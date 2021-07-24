@@ -11,6 +11,7 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
+    <body>
     <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <%= link_to "CampQ", root_path,  class: "navbar-brand" %>
@@ -40,7 +41,7 @@
           <ul>
               <li class="nav-item">
                       <div class="avatar">
-                          <%= link_to "", profile_path, class: "btn btn-success"%>
+                          <a href="profile"><img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" /></a>
                       </div>
               </li>
           </ul>
@@ -60,9 +61,9 @@
           <% end %>
       </div>
   </nav>
-  <body>
+  
     <%= yield %>
-  </body>
+  
   <div class="footer">
     <div class="links">
       <h3>This app has been built with 🧡 by students at Le Wagon.</h3>
@@ -84,4 +85,5 @@
       </a>
     </div>
   </div>
+  </body>
 </html>

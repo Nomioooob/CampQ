@@ -1,5 +1,4 @@
 // Specific CSS for your home-page
-
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -13,7 +12,7 @@ p{
 
 .container{
     width: 100vw !important;
-    overflow: hidden;
+    overflow: visible;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(300px);
     scroll-snap-type: y mandatory;
@@ -21,10 +20,6 @@ p{
 
 .banner, .container{
     scroll-behavior: smooth;
-}
-
-.about{
-    display: flex;
 }
 
 .row{
@@ -35,15 +30,19 @@ p{
 .about{
     display: flex;
     height: 30vh;
+    margin-top: 15rem;
 }
 
 .about-section{
     line-height: 35px;
 }
 
+#about-camps{
+    margin-left: 50px;
+}
+
 #popular-content{
     background-color: #ede1b5;
-    height: 30vh;
     margin-left: -22.5rem;
     margin-right: -22.5rem;
     justify-content: center;

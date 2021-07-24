@@ -5,13 +5,13 @@
             <%#= f.input :name, input_html: {value: ""} %>
             <%#= f.submit "Search", class: "btn btn-primary" %>
         <%# end %>
-    </div>
+    <%= link_to "Browse", products_path,  class: "nav-item btn btn-browse", id: "browse-btn" %>
 </div>
 <div class="container">
     <div class="row">
         <section class="content">
             <div class="about">
-                <div class="about-section col-6" id="about-campq">
+                <div class="about-section" id="about-camps">
                     <h3>CampQ, a place where you can find and rent out all the essentials for camping</h3>
                     <ul>
                         <li><p><i class="fas fa-plus"></i> Find the camping items you've been looking for</p></li>
@@ -19,7 +19,7 @@
                         <li><p><i class="fas fa-plus"></i> All items rented out at affordable prices</p></li>
                     </ul>
                 </div>
-                <div class="about-section col-6" id="about-images">
+                <div class="about-section" id="about-images">
                     <div class="about-images" id="about-img-1">
                         <img src="https://preview.redd.it/i9gtrrh4djv51.jpg?width=960&crop=smart&auto=webp&s=86aedf14f51ba5c5928799c22c4397146bc4511e" alt="">
                     </div>
@@ -71,4 +71,5 @@
                 <%# end %>
                 <%= link_to "Browse", products_path,  class: "nav-item btn btn-browse", id: "browse-btn" %>
         </section>
+    </div>
 </div>
