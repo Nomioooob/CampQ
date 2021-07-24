@@ -15,3 +15,21 @@
         opacity: 1.0;
     }
 }
+
+#filter{
+    border: none;
+    background-color: transparent;
+}
+
+.btns-filter{
+    background-color: transparent;
+    border: 1px solid orange;
+    box-shadow: 1px 1px lightgrey;
+    border-radius: 5px;
+    display: inline-flex;
+}
+
+.btns-filter-section{
+    display: inline-flex;
+    gap: 4rem;
+}
