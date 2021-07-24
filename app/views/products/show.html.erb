@@ -1,14 +1,8 @@
-<h1>Product Page</h1>
-<%= link_to product_path(@product),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: "btn btn-warning"%>
-
-<%= link_to 'Products', products_path, class: "btn btn-primary" %>
 <nav class="flex-nav">
   <div class="container">
     <div class="grid menu">
       <div class="column-xs-8 column-md-6">
-       <p id="highlight"> <%= link_to "CampQ", root_path %></p>
+       <!-- <p id="highlight"> <%= link_to "CampQ", root_path %></p> -->
       </div>
       <div class="column-xs-4 column-md-6">
         <a href="#" class="toggle-nav">Menu <i class="ion-navicon-round"></i></a>
@@ -55,37 +49,38 @@
           <p> <%= @product.description %></p>
         </div>
         <%= link_to(new_product_booking_path(@product)) do %>
-          <button class="add-to-cart">Add To Cart</button>
+          <button class="add-to-cart">Reserve this item</button>
           <% end %>
       </div>
     </div>
-    <div class="grid related-products py-3">
+    <div class="related-products py-3">
       <div class="column-xs-12">
         <h3>You may also like</h3>
       </div>
-      <div class="row">
-        <div class="col-4">
-      <%= link_to(product_path(@product)) do %>
-        <img src="<%= Product.where.not(id: params[:id]).first.picture %>">
-        <h4><%= Product.where.not(id: params[:id]).first.name %></h4>
-        <p class="price">¥ <%= Product.where.not(id: params[:id]).first.price %></p>
-      <% end %>
-      </div>
-      <div class="col-4">
-      <%= link_to(product_path(@product)) do %>
-        <img src="<%= Product.where.not(id: params[:id]).last.picture %>">
-        <h4> <%= Product.where.not(id: params[:id]).last.name %></h4>
-        <p class="price">¥ <%= Product.where.not(id: params[:id]).first.price %></p>
-      <% end %>
-      </div>
-      <div class="col-4">
+      <div class="d-flex justify-content-between p-2">
+        <div class="column-xs-12 column-md-4 mx-1">
+          <%= link_to(product_path(@product)) do %>
+           <img src="<%= Product.where.not(id: params[:id]).first.picture %>">
+           <h4><%= Product.where.not(id: params[:id]).first.name %></h4>
+           <p class="price">¥ <%= Product.where.not(id: params[:id]).first.price %></p>
+         <% end %>
+        </div>
+        <div class="column-xs-12 column-md-4 mx-1">
+         <%= link_to(product_path(@product)) do %>
+          <img src="<%= Product.where.not(id: params[:id]).last.picture %>">
+          <h4> <%= Product.where.not(id: params[:id]).last.name %></h4>
+          <p class="price">¥ <%= Product.where.not(id: params[:id]).first.price %></p>
+         <% end %>
+        </div>
+        <div class="column-xs-12 column-md-4 mx-1">
         <%= link_to(product_path(@product)) do %>
         <img src="<%= Product.where.not(id: params[:id]).first.picture %>">
         <h4><%= Product.where.not(id: params[:id]).first.name %></h4>
         <p class="price">¥ <%= Product.where.not(id: params[:id]).first.price %></p>
       <% end %>
       </div>
-      </div>
+    </div>
+    </div>
     </div>
   </div>
 </main>
