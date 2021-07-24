@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h1>Products</h1>
+
     <div class="content">
       <section>
         <div style="display: flex;">
@@ -10,7 +10,7 @@
         <div class="btns-filter-section">
           <button class="btns-filter" data-toggle="collapse" data-target="#price-range">Price</button>
             <div class="slidecontainer">
-              <input id="price-range" class="slider"  type="range" min="1" max="100" value="50">
+              <span class="value">Value:</span><input id="price-range" class="slider"  type="range" min="1" max="100" value="50">
             </div>
           <button class="btns-filter"  data-toggle="collapse" data-target="#rating-range">Rating</button>
           <div class="slidecontainer">
@@ -29,11 +29,12 @@
         <section class="product-cards">
           <% @products.each do |product| %>
               <div class="card-trip">
+                <% link_to product_path(product) %>
                 <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026540&id=1514376&recipeId=728" alt="">
                 <div class="card-trip-infos">
-                 <div>
+                 <div style="display: ;">
                    <figcaption><%= link_to product.name, product_path(product) %></figcaption>
-                   <figcaption>$<%= product.price %></figcaption>
+                   <figcaption><strong>$<%= product.price %></strong></figcaption>
                  </div>
                 </div>
               </div>
@@ -48,7 +49,6 @@
     
     const collapse_button = document.querySelector('#filter');
     const collapse_icon = document.querySelector('.icon');
-        // console.log(collapse_icon);
 
     collapse_button.addEventListener("click", (event) => {
         if (collapse_icon.classList.contains('fa-chevron-down')) {
@@ -58,11 +58,15 @@
         };
     });
 
-    const slider = document.getElementById("range-filter");
-    output.innerHTML = slider.value; // Display the default slider value
+    const slider = document.querySelector(".slider");
+    console.log(slider.value);
+    const span = document.querySelector(".value");
+    console.log(span);
+    span.innerText = slider.value; // Display the default slider value
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
-      output.innerHTML = this.value;
+      span.innerHTML = this.value;
     }
+
 </script>
