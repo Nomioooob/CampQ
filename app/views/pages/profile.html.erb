@@ -20,19 +20,23 @@
   </div>
     <hr>
   <h1 style="text-align: center" class="m-4 4">Bookings</h1>
-    <div class="inframe card-columns p-4 mb-4">
-      <% @bookings.each do |booking| %>
-        <li class="p-2 mb-4" style="list-style-type:none;">
-          <div class="img-profile">
-          <span class="card-category py-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/400x640/?camp);">
-          </span>
-            <ul id="details">
-              <li><b>Booking status: </b><%= booking.status %></li>
-              <li><b>Price: </b> ￥<%= booking.product.price %></li>
-              <li><b>Starting Date: </b><%= booking.start_time %></li>
-              <li><b>Ending Date: </b><%= booking.end_time %></li>
-            </ul>
+    <div class="container">
+      <div class="row">
+          <% @bookings.each do |booking| %>
+            <div class="col-4 mt-4">
+              <div class="img-profile">
+                <span class="card-category py-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/400x640/?camp);">
+                </span>
+                  <ul id="details">
+                    <li><b>Booking status: </b><%= booking.status %></li>
+                    <li><b>Price: </b> ￥<%= booking.product.price %></li>
+                    <li><b>Starting Date: </b><%= booking.start_time %></li>
+                    <li><b>Ending Date: </b><%= booking.end_time %></li>
+                  </ul>
+              </div>
+            </div>
           <% end %>
-          </div>
       </div>
+    </div>
   </div>
+</div>
