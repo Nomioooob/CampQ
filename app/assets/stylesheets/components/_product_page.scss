@@ -240,6 +240,10 @@ nav {
   display: none;
 }
 
+.product-gallery {
+  width: 640px;
+}
+
 .image-list {
   li {
     margin: 0;
@@ -247,7 +251,7 @@ nav {
 }
 
 @media (min-width: $md) {
-  .product-image img, .image-list img {
+  .image-list img {
     width: 100%;
   }
 
@@ -255,6 +259,7 @@ nav {
     display: block;
     img {
       height: 52vh;
+      width: 100%;
       &.active {
         display: block;
         margin: 0 0 0.75rem 0;

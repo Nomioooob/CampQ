@@ -3,6 +3,6 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :category, collection: ["Tent", "Camp Kitchen", "Sleeping Bags", "Hammocks"], prompt: 'Select category', label: false %>
-  <%= f.input :picture, as: :file, label: "Upload picture(s) of your product" %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "Upload picture(s) of your product" %>
   <%= f.submit "Create listing", class: 'btn btn-primary' %>
 <% end %>
