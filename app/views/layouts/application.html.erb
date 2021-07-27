@@ -31,7 +31,7 @@
           <ul class="navbar-nav ml-auto mr-auto">
               <li class="nav-item">
                   <div class="justify-content-md-center">
-                    <%= form_tag products_path, method: :get do %>
+                    <%= form_tag products_path, method: :get, class: "form-inline my-2 my-lg-0", style: "width: 50rem;" do %>
                       <%= text_field_tag :query,
                         params[:query],
                         class: "form-control",
