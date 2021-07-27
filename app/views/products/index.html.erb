@@ -31,6 +31,10 @@
               <div class="card-trip">
                 <% link_to product_path(product) %>
                 <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026540&id=1514376&recipeId=728" alt="">
+                <% link_to(product_path(product)) %>
+                <% product.photos.each do |photo| %>
+                <%= cl_image_tag photo.key, width: 100 %>
+                <% end %>
                 <div class="card-trip-infos">
                  <div style="display: ;">
                    <figcaption><%= link_to product.name, product_path(product) %></figcaption>
@@ -46,7 +50,7 @@
 </div>
 
 <script>
-    
+
     const collapse_button = document.querySelector('#filter');
     const collapse_icon = document.querySelector('.icon');
 

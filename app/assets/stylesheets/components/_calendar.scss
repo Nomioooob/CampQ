@@ -19,3 +19,15 @@
 //   background: #1BCB7F;
 //   color: white;
 // }
+.booking-profile-calendar {
+  color: white;
+  // padding: 8px 24px;
+  // border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  width:120px;
+  height:40px;
+}
+.booking-profile-calendar > p {
+  font-size: 12px;
+}
