@@ -26,26 +26,12 @@ require("channels")
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { activateImage } from '../components/active_image';
 import { initFlatpickr } from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  activateImage();
   initFlatpickr();
 });
 
-const activeImage = document.querySelector(".product-image .active");
-const productImages = document.querySelectorAll(".image-list img");
-const navItem = document.querySelector('a.toggle-nav');
 
-function changeImage(e) {
-  activeImage.src = e.target.src;
-}
-
-function toggleNavigation(){
-  this.nextElementSibling.classList.toggle('active');
-}
-
-productImages.forEach(image => image.addEventListener("click", changeImage));
-// navItem.addEventListener('click', toggleNavigation);

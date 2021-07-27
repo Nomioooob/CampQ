@@ -12,12 +12,17 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @random_product = Product.pick_random
     authorize @product
   end
 
   def new
     @product = Product.new
     authorize @product
+  end
+
+  def self.pick_random
+    order(Arel.sql('RANDOM()')).first
   end
 
   def create
@@ -45,6 +50,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :picture, :category)
+    params.require(:product).permit(:name, :description, :price, :picture, :category, photos: [])
   end
 end
