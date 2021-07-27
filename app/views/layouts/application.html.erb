@@ -31,10 +31,18 @@
           <ul class="navbar-nav ml-auto mr-auto">
               <li class="nav-item">
                   <div class="justify-content-md-center">
-                      <form class="form-inline my-2 my-lg-0" style="width: 50rem;" action="/products">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Ex. Tent" style="font-style: italic; width: 29rem;" aria-label="Search" name="query">
-                          <button id="search" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+                    <%= form_tag products_path, method: :get do %>
+                      <%= text_field_tag :query,
+                        params[:query],
+                        class: "form-control",
+                        placeholder: "Ex. Tent"
+                      %>
+                      <%= submit_tag "Search", class: "btn btn-primary" %>
+                    <% end %>
+                    <%# <form class="form-inline my-2 my-lg-0" style="width: 50rem;" action="/products">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Ex. Tent" style="font-style: italic; width: 29rem;" aria-label="Search" name="query">
+                        <button id="search" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form> %>
                   </div>
               </li>
           </ul>
