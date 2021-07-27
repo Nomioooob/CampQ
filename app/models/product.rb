@@ -9,6 +9,12 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 1 }
   validates :category, inclusion: { in: CATEGORY }
 
+  include PgSearch::Model
+  pg_search_scope :search_by_name,
+    against: [ :name ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 
   def self.pick_random
     self.order(Arel.sql('RANDOM()')).first(3)
