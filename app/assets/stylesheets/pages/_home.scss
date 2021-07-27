@@ -21,10 +21,11 @@ p{
 .banner, .container{
     scroll-behavior: smooth;
 }
-
-.row{
-    padding: 10px;
-    display: block;
+.banner {
+  .row{
+      padding: 10px;
+      display: block;
+  }
 }
 
 .about{
