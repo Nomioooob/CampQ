@@ -61,7 +61,7 @@
       <div class="d-flex justify-content-between p-2">
           <% @random_product.each do |random_product| %>
           <%= link_to(product_path(random_product)) do %>
-           <div class="column-xs-12 column-md-4 mx-1">
+           <div class="recommended-item column-xs-12 column-md-4 mx-1">
                <%= cl_image_tag random_product.photos[1].key %>
                <h4><%= random_product.name %></h4>
                <p class="price">¥ <%= random_product.price %></p>
