@@ -21,10 +21,6 @@ class ProductsController < ApplicationController
     authorize @product
   end
 
-  def self.pick_random
-    order(Arel.sql('RANDOM()')).first
-  end
-
   def create
     @product = Product.new(product_params)
     @user = current_user
