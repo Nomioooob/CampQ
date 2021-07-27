@@ -5,7 +5,7 @@
             <%#= f.input :name, input_html: {value: ""} %>
             <%#= f.submit "Search", class: "btn btn-primary" %>
         <%# end %>
-    <%= link_to "Browse", products_path,  class: "nav-item btn btn-browse", id: "browse-btn" %>
+    <%= link_to "Browse", products_path,  class: "nav-item btn btn-success", id: "browse-btn" %>
 </div>
 <div class="container">
     <div class="row">
@@ -29,7 +29,7 @@
         <section class="content" id="popular-content">
             <div class="popular">
                 <h3 id="popular-header">Most Popular Camping Items</h3>
-                    <div class="cards">
+                    <div class="cards" id="popular-cards">
                         <div class="card-category">
                             Tent
                         </div>
@@ -69,7 +69,7 @@
                     <%#= f.input :name, input_html: {value: ""} %>
                     <%#= f.submit "Search", class: "btn btn-primary" %>
                 <%# end %>
-                <%= link_to "Browse", products_path,  class: "nav-item btn btn-browse", id: "browse-btn" %>
+                <%= link_to "Browse", products_path,  class: "nav-item btn btn-success", id: "browse-btn" %>
         </section>
     </div>
 </div>

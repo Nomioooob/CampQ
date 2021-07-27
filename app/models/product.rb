@@ -9,4 +9,9 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :price, numericality: { greater_than: 1 }
   validates :category, inclusion: { in: CATEGORY }
+
+
+  def self.pick_random
+    self.order(Arel.sql('RANDOM()')).first(3)
+  end
 end

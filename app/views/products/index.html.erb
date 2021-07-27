@@ -29,12 +29,8 @@
         <section class="product-cards">
           <% @products.each do |product| %>
               <div class="card-trip">
-                <% link_to product_path(product) %>
-                <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026540&id=1514376&recipeId=728" alt="">
                 <% link_to(product_path(product)) %>
-                <% product.photos.each do |photo| %>
-                <%= cl_image_tag photo.key, width: 100 %>
-                <% end %>
+                <%= cl_image_tag product.photos[1].key, width: 100 %>
                 <div class="card-trip-infos">
                  <div style="display: ;">
                    <figcaption><%= link_to product.name, product_path(product) %></figcaption>
