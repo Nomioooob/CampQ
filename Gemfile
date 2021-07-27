@@ -20,7 +20,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'pundit'
 gem "simple_calendar", "~> 2.4"
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
 
