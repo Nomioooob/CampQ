@@ -24,8 +24,8 @@
       </section>
       <% if @query %>
         <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
-      <% else %>
-        <h3>Showing <%= Product.count %> products</h3>
+      <% end %>
+        <h3>Showing <%= @products.count %> products</h3>
         <section class="product-cards">
           <% @products.each do |product| %>
               <div class="card-trip">
@@ -40,13 +40,12 @@
               </div>
           <% end %>
         </section>
-      <% end %>
     </div>
   </div>
 </div>
 
 <script>
-    
+
     const collapse_button = document.querySelector('#filter');
     const collapse_icon = document.querySelector('.icon');
 
