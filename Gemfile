@@ -22,7 +22,7 @@ gem 'pundit'
 gem "simple_calendar", "~> 2.4"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
-
+gem 'pg_search', '~> 2.3.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

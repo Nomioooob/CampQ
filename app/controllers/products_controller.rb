@@ -1,13 +1,16 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+  skip_after_action :verify_policy_scoped, only: :index
   before_action :set_product, only: %i[show destroy]
 
   def index
     if params[:query].present?
       @query = params[:query]
-      @products = policy_scope(Product.where("name LIKE ?", "%#{params[:query]}%"))
+      # @products = policy_scope(Product.where("name LIKE ?", "%#{params[:query]}%"))
+      @products = Product.search_by_name(@query)
     else
       @products = policy_scope(Product)
+      # @products = Product.all
     end
   end
 
