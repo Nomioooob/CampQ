@@ -12,7 +12,9 @@ const activateImage = () => {
   }
 
   productImages.forEach(image => image.addEventListener("click", changeImage));
-  navItem.addEventListener('click', toggleNavigation);
+  if (navItem) {
+    navItem.addEventListener('click', toggleNavigation);
+  }
 }
 
 export { activateImage };
