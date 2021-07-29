@@ -2,7 +2,7 @@
   <h1 style="text-align: center" class="m-4 4">Dashboard</h1>
   <div class="d-flex mt-sm-4">
     <div style="text-align: center; padding: 32px; margin-top: 64px; margin-right: 32px;">
-      <img src="https://kitt.lewagon.com/placeholder/users/cveneziani" class="avatar-profile" alt="Avatar">
+      <img src=" <%= current_user.picture %>" class="avatar-profile" alt="Avatar">
       <h2>Hello <%=current_user.first_name%>!</h2>
       <h4><%=current_user.email%></h4>
       <h4><%=current_user.location%></h4>
