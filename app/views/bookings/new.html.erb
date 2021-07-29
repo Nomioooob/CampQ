@@ -6,7 +6,7 @@
       <%= render 'form', product: @product, booking: @booking %>
       </div>
       <div>
-        <img src="<%= @product.picture %>" alt="item-picture" width="500" height="500">
+        <%= cl_image_tag @product.photos[0].key, width: 500 %>
       </div>
     </div>
   </div>

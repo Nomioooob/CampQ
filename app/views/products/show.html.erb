@@ -1,5 +1,7 @@
+
+
 <nav class="flex-nav">
-  <div class="container">
+  <div class="product-container">
     <div class="grid menu">
       <div class="column-xs-8 column-md-6">
        <!-- <p id="highlight"> <%= link_to "CampQ", root_path %></p> -->
@@ -17,7 +19,7 @@
   </div>
 </nav>
 <main>
-  <div class="container">
+  <div class="product-container">
     <div class="grid second-nav">
       <div class="column-xs-12">
         <nav>
@@ -50,7 +52,9 @@
           <p> <%= @product.description %></p>
         </div>
         <%= link_to(new_product_booking_path(@product)) do %>
-          <button class="add-to-cart">Reserve this item</button>
+          <% if @product.user != current_user %>
+             <button class="add-to-cart">Reserve this item</button>
+          <% end %>
           <% end %>
       </div>
     </div>

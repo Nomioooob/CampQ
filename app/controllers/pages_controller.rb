@@ -14,5 +14,6 @@ class PagesController < ApplicationController
     @user = current_user
     start_date = params.fetch(:start_date, Date.today).to_date
     @bookings = Booking.where(user: @user, start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @rental_bookings =  current_user.bookings_as_owner
   end
 end
