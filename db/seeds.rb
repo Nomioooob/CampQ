@@ -9,7 +9,9 @@ nomin = User.create!(
   password: "111111",
   first_name: "Nomin",
   last_name: "Batsaikhan",
-  location: "Japan"
+  location: "Japan",
+  picture: "https://kitt.lewagon.com/placeholder/users/Nomioooob"
+
 )
 
 aidan = User.create!(
@@ -17,7 +19,8 @@ aidan = User.create!(
   password: "111111",
   first_name: "Aidan",
   last_name: "Fournier",
-  location: "Japan"
+  location: "Japan",
+  picture: "https://kitt.lewagon.com/placeholder/users/AidanFournier"
 )
 
 sasha = User.create!(
@@ -25,7 +28,8 @@ sasha = User.create!(
   password: "111111",
   first_name: "Sasha",
   last_name: "Kaverina",
-  location: "Japan"
+  location: "Japan",
+  picture: "https://kitt.lewagon.com/placeholder/users/sashakaverina"
 )
 
 shogo = User.create!(
@@ -33,7 +37,8 @@ shogo = User.create!(
   password: "111111",
   first_name: "Shogo",
   last_name: "Miyagi",
-  location: "Japan"
+  location: "Japan",
+  picture: "https://kitt.lewagon.com/placeholder/users/80andAbove"
 )
 
 bag1 = URI.open('https://source.unsplash.com/800x600/?sleepingbag')
@@ -118,7 +123,6 @@ hammocks.save!
 
 booking1 = Booking.new(
   rating: 4,
-  status: "pending",
 )
 
 booking1.user = nomin
@@ -127,7 +131,6 @@ booking1.save!
 
 booking2 = Booking.new(
   rating: 3,
-  status: "available",
 )
 
 booking1.user = shogo
