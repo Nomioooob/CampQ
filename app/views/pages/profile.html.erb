@@ -1,5 +1,9 @@
 <div class="container p-16">
   <h1 style="text-align: center" class="m-4 4">Dashboard</h1>
+
+  <h1>My Gear</h1>
+  <%= render 'gear_card', bookings: @bookings %>
+
   <div class="d-flex mt-sm-4">
     <div style="text-align: center; padding: 32px; margin-top: 64px; margin-right: 32px;">
       <img src="https://kitt.lewagon.com/placeholder/users/cveneziani" class="avatar-profile" alt="Avatar">
