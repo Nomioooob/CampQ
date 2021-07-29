@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @random_product = Product.pick_random
     authorize @product
   end
 
