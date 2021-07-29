@@ -27,7 +27,8 @@ class BookingsController < ApplicationController
   def update
     authorize @booking
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to profile_path
+    # need to add anchor once it's created
   end
 
   def destroy
