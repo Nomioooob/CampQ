@@ -1,8 +1,8 @@
 .simple-calendar {
   table {
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 500px;
+    min-height: 30px;
+    min-width: 30px;
+
   }
   .today {
     background-color: #FAF3DD;
@@ -27,7 +27,7 @@
   // border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
-  width:120px;
+  width:80px;
   height:40px;
 }
 .booking-profile-calendar > p {
