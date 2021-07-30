@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="booking-actions">
-        <% if booking.pending? %>
+        <% if booking.pending? && current_user != booking.user %>
           <%= simple_form_for booking do |f| %>
             <%= f.input :status, as: :hidden, input_html: { value: :accepted} %>
             <%= f.submit 'Accept', class: 'btn btn-primary m-3' %>
