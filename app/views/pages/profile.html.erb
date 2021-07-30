@@ -12,14 +12,14 @@
       <h4><%=current_user.location%></h4>
     </div>
     <div>
-     <%= month_calendar(events: @bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
-                <%= date %>
-                <% bookings.each do |booking| %>
-                  <div class="booking-profile-calendar">
-                    <p><%= booking.product.name %></p>
-                  </div>
-                <% end %>
-              <% end %>
+      <%= month_calendar(events: @bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
+        <%= date %>
+        <% bookings.each do |booking| %>
+          <div class="booking-profile-calendar">
+            <p><%= booking.product.name %></p>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
     <hr>
@@ -59,15 +59,17 @@
               <div class="img-profile">
                 <span class="card-category py-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path booking.product.photos[0].key, width: 100 %>);">
                 </span>
-                  <ul id="details">
-                    <li><b>Booking status: </b><%= booking.status %></li>
-                    <li><b>Price: </b> ￥<%= booking.product.price %></li>
-                    <li><b>From: </b><%= booking.start_time.to_date %></li>
-                    <li><b>To: </b><%= booking.end_time.to_date %></li>
-                  </ul>
+                <ul id="details">
+                  <li><b>Booking status: </b><%= booking.status %></li>
+                  <li><b>Price: </b> ￥<%= booking.product.price %></li>
+                  <li><b>From: </b><%= booking.start_time.to_date %></li>
+                  <li><b>To: </b><%= booking.end_time.to_date %></li>
+                </ul>
               </div>
             </div>
           <% end %>
+        </div>
       </div>
     </div>
+  </div>
 </div>
