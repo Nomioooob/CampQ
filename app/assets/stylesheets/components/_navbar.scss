@@ -3,25 +3,24 @@
   transition: background-color 200ms linear;
   background-color: 	#A9A9A9;
   
-  .nav-btn-item{
-    gap: 15px;
-  }
-
-  .navbar-expand-lg, .navbar-collapse {
+  // This is the to put every item in the navbar as a flex and have a gap in between
+  // each item
+  .navbar-expand-lg, .navbar-collapse, .nav-btn-item {
     display: flex !important;
     flex-basis: auto;
     gap: 15px;
   }
   
+  // This is the drop down menu for Locations
   #dropdownMenuButton{
     background-color: white !important;
     border: none !important;
     color: inherit;
   }
-  
-  #nav-logo {
-    max-width: 74px;
-    height: auto;
+
+  #query{
+    border-radius: 5px;
+    box-shadow: 1px 1px #e7e7e7;
   }
 }
 
