@@ -21,22 +21,6 @@
         margin-left: 50px;
     }
     
-    #popular-content{
-        background-color: #ede1b5;
-        justify-content: center;
-        margin-bottom: 10rem;
-        margin-top: -5rem;
-        .popular{
-            padding: 20rem;
-            margin-top: -20rem;
-        }
-        
-        #popular-header{
-            text-align: center;
-            margin-top: 12rem;
-        }
-    }
-    
     .reviews{
         display: flex;
         ul{
@@ -59,6 +43,22 @@
             color: white;
             padding: 2rem;
         }
+    }
+}
+
+#popular-content{
+    background-color: #ede1b5;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: -5rem;
+    .popular{
+        padding: 20rem;
+        margin-top: -20rem;
+    }
+    
+    #popular-header{
+        text-align: center;
+        margin-top: 12rem;
     }
 }
 
