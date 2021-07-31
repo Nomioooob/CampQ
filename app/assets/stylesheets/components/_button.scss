@@ -1,6 +1,6 @@
 .btn{
     // border-radius: 3px;
-    box-shadow: -2px 1px 2px -8px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 1px #919191;
     :hover{
         opacity: 1.0;
     }
@@ -8,26 +8,9 @@
 
 #browse-btn{
     margin-left: 50px;
+    position: absolute;
+    top: 50rem;
     :hover{
         opacity: 1.0;
     }
-}
-
-#filter{
-    border: none;
-    background-color: transparent;
-}
-
-.btns-filter{
-    background-color: transparent;
-    border: 1px solid orange;
-    box-shadow: -2px 1px 24px -8px rgba(0, 0, 0, 0.48);
-    // box-shadow: 1px 1px lightgrey;
-    // border-radius: 5px;
-    display: inline-flex;
-}
-
-.btns-filter-section{
-    display: inline-flex;
-    gap: 4rem;
 }
