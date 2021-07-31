@@ -21,6 +21,7 @@
             </div>
         </div>
       </section> %>
+      
       <% if @query %>
         <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
       <% end %>
