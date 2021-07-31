@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_07_29_110542) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "status", default: 1
+    t.integer "status", default: 0
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer "rating", default: 0
