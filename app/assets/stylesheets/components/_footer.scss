@@ -1,20 +1,20 @@
 .footer {
-  text-align: center;
   padding: 50px;
   background-color: #708F8E;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer a {
-  font-size: 40px;
-  color:  #C1F4AF;
+  color: white;
 }
 
 .footer p {
-  color: #C1F4AF;
+  color: white;
   font-size: 16px;
 }
 .social-ikon {
-  color: #C1F4AF;
+  color: white;
 }
 
 .social-ikon:hover {
@@ -23,5 +23,29 @@
 
 .footer h3 {
   font-size: 24px;
-  color: #C1F4AF;
+  color: white;
+}
+
+.footer .btn-send {
+  background-color: white ;
+  color: rgba(108, 122, 137, 1);
+  border: 1px solid;
+  box-shadow: -2px 1px 24px -8px rgba(0, 0, 0, 0.48);
+  box-shadow: 1px 1px lightgrey;
+  border-radius: 3px;
+  display: inline-flex;
+  box-shadow: -2px 1px 2px -8px rgba(0, 0, 0, 0.48);
+}
+
+footer .form-control {
+    background-color: white;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+.list-unstyled {
+  color: white;
 }
