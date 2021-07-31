@@ -12,11 +12,11 @@
             </div>
             <div class="info-section">
               <p class="booking-info-small">Has been requested by</p>
-              <%= booking.user.first_name %>
+              <%= booking.user.first_name %> <%= booking.user.last_name %>
             </div>
           </div>
           <div class="booking-info-time info-section">
-            <p class="booking-info-small py-0 mb-2">Duration:</p>
+            <p class="booking-info-small py-0 mb-2"></p>
             <%= booking.start_time.strftime('%a, %B %d, %Y') %> - <%= booking.end_time.strftime('%a, %B %d, %Y') %>
           </div>
           <div class="info-section mt-4 d-flex">

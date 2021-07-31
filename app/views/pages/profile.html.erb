@@ -20,11 +20,10 @@
 
     <div class="tab-content" id="myTabContent">
       <!-- my profile -->
-      <div class="tab-pane fade py-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="d-flex justify-content-between mt-5">
+      <div class="tab-pane fade py-3 show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="d-flex justify-content-around mt-5">
           <div>
             <%= render 'profile_tab', user: @user %>
-
           </div>
           <div>
             <%= render 'profile_calendar', bookings: @bookings, rental_bookings: @rental_bookings %>
@@ -33,22 +32,33 @@
       </div>
 
       <!-- my rentals -->
-      <div class="tab-pane fade py-3 show active" id="bookings" role="tabpanel" aria-labelledby="rentals-tab">
-        <h1 class="m-3">Requests</h1>
+      <div class="tab-pane fade py-3 pt-3" id="requests" role="tabpanel" aria-labelledby="requests-tab">
+        <% if @bookings.present? %>
+          <p class="m-3 fs-6">Check the status of your rental requests.</p>
+          <%= render 'gear_card', bookings: @bookings %>
+        <% else %>
+          <p>You have not requested any rentals at this time.</p>
+        <% end %>
+      </div>
 
-        <%= render 'gear_card', bookings: @bookings %>
+      <!-- requests -->
+      <div class="tab-pane fade py-3  pt-3" id="bookings" role="tabpanel" aria-labelledby="rentals-tab">
+        <% if @rental_bookings.present? %>
+          <p class="m-3 fs-6">Check the status of your rental requests. Accept/reject any pending requests.</p>
+          <%= render 'gear_card', bookings: @rental_bookings %>
+        <% else %>
+          <p>There are no requests for your gear at this time.</p>
+        <% end %>
 
       </div>
-      <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="requests-tab">
-        <h1 class="m-3">My rentals</h1>
 
-        <%= render 'gear_card', bookings: @rental_bookings %>
-      </div>
-      <div class="tab-pane fade py-3" id="lists" role="tabpanel" aria-labelledby="listings-tab">
-        <h1 class="m-3">My posts</h1>
-
-        <h2 class="m-3">No products listed. Create your first post by clicking on the button in the top right corner.</h2>
-
+      <!-- my listings -->
+      <div class="tab-pane fade py-3  pt-5" id="lists" role="tabpanel" aria-labelledby="listings-tab">
+        <% if @user.products.present? %>
+          <%= render 'listing_card', products: @user.products %>
+        <% else %>
+          <p class="m-3">No products listed. Click 'List your gear' and create your first listing.</p>
+        <% end %>
       </div>
     </div>
  </div>
