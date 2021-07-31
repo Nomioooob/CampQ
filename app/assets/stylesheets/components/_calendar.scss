@@ -1,20 +1,27 @@
 .simple-calendar {
   table {
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 500px;
+    max-height: 600px;
+    min-width: 600px;
+
   }
   .today {
     background-color: #FAF3DD;
   }
 }
 
+.day {
+  max-width: 74px;
+
+}
+
 .booking {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 0px;
   // border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
+  line-height: 0px;
+  margin-bottom: 0px;
 }
 
 // .meeting:hover {
@@ -25,11 +32,13 @@
   color: white;
   // padding: 8px 24px;
   // border-radius: 4px;
-  background: #1EDD88;
+  background: #708F8E;
   transition: background 0.3s ease;
-  width:120px;
+  width: auto;
   height:40px;
+  text-align: center;
 }
 .booking-profile-calendar > p {
   font-size: 12px;
+    margin-bottom: 0;
 }

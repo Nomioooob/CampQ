@@ -32,3 +32,16 @@ const totalPrice = () => {
 };
 
 export { totalPrice };
+// const totalPrice = () => {
+//   const startDateInput = document.querySelector("#booking_start_time");
+//   const startDate = startDateInput.value.split(' ')[0];
+//   const endDate = startDateInput.value.split(' ')[2];
+//   const totalDays = document.querySelector("#total-price")
+
+//   startDateInput.addEventListener("change", (event) => {
+//     console.log(event);
+//     totalDays
+//   })
+// };
+
+// export { totalPrice };

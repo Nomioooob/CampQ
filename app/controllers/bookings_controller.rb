@@ -25,10 +25,13 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking = Booking.find(params[:id])
     authorize @booking
-    @booking.update(booking_params)
-    redirect_to profile_path
-    # need to add anchor once it's created
+    if @booking.update(booking_params)
+     redirect_to profile_path
+    else
+     render "new"
+    end
   end
 
   def destroy
