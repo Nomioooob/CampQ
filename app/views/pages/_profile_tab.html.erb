@@ -1,0 +1,16 @@
+<div class="dashboard_card my-3">
+  <div>
+    <%= image_tag current_user.picture, class: "avatar-profile" %>
+  </div>
+  <div class="dashboard-info mt-4 p-3 border-top">
+    <div class="pb-2">
+      <%= user.first_name %> <%= user.last_name %>
+    </div>
+    <div class="pb-2">
+      <%= user.email %>
+    </div>
+    <div class="pb-2">
+      <%= user.location %>
+    </div>
+  </div>
+</div>
