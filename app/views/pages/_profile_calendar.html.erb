@@ -3,7 +3,7 @@
     <%= date %>
     <% bookings.each do |booking| %>
       <div class="booking-profile-calendar">
-        <p><%= booking.product.name %></p>
+        <p><%= booking.product.name.split(' ')[0] %></p>
         <p><%= booking.status %></p>
       </div>
     <% end %>

@@ -1,0 +1,14 @@
+<section class="product-cards">
+  <% products.each do |product| %>
+    <div class="card-trip">
+      <% link_to(product_path(product)) %>
+      <%= cl_image_tag product.photos[1].key, width: 100 %>
+      <div class="card-trip-infos">
+       <div style="display: ;">
+         <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+         <figcaption><strong>$<%= product.price %></strong></figcaption>
+       </div>
+      </div>
+    </div>
+  <% end %>
+</section>

@@ -1,7 +1,7 @@
 .simple-calendar {
   table {
     max-height: 600px;
-    max-width: 600px;
+    min-width: 600px;
 
   }
   .today {
@@ -9,12 +9,19 @@
   }
 }
 
+.day {
+  max-width: 74px;
+
+}
+
 .booking {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 0px;
   // border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
+  line-height: 0px;
+  margin-bottom: 0px;
 }
 
 // .meeting:hover {
@@ -27,10 +34,11 @@
   // border-radius: 4px;
   background: #708F8E;
   transition: background 0.3s ease;
-  width:100%;
+  width: auto;
   height:40px;
   text-align: center;
 }
 .booking-profile-calendar > p {
   font-size: 12px;
+    margin-bottom: 0;
 }
