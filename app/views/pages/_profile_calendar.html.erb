@@ -1,0 +1,11 @@
+<div>
+  <%= month_calendar(events: bookings+rental_bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
+    <%= date %>
+    <% bookings.each do |booking| %>
+      <div class="booking-profile-calendar">
+        <p><%= booking.product.name %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
