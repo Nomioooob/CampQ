@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>CampQ</title>
+    <link rel="ico" type="image/png" href="public/favicon.ico">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +11,13 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
+    <body>
 
-  <body>
+    <%= render "shared/navbar" %>
+  
     <%= yield %>
+  
+    <%= render "shared/footer" %>
+
   </body>
 </html>

@@ -7,7 +7,14 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "simple_calendar";
+@import "flatpickr/dist/themes/confetti";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import 'components/card';
+@import "components/product_page";
+@import "pages/profile";
+@import "components/tabs";
+@import "components/form";

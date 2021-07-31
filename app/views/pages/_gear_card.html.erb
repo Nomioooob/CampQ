@@ -1,0 +1,51 @@
+<div class="bookings m-3">
+  <% bookings.each do |booking| %>
+    <div class="booking-card border-bottom pb-5">
+      <div class='booking-left'>
+        <!-- if you're using cloudinary and activestorage -->
+        <%= cl_image_tag booking.product.photos[0].key, class: 'product-picture' %>
+        <div class="booking-info mx-5">
+          <div class="booking-info-details">
+            <div class="info-section border-bottom">
+              <p class="booking-info-small">A reservation for </p>
+              <%= booking.product.name %>
+            </div>
+            <div class="info-section">
+              <p class="booking-info-small">Has been requested by</p>
+              <%= booking.user.first_name %>
+            </div>
+          </div>
+          <div class="booking-info-time info-section">
+            <p class="booking-info-small py-0 mb-2">Duration:</p>
+            <%= booking.start_time.strftime('%a, %B %d, %Y') %> - <%= booking.end_time.strftime('%a, %B %d, %Y') %>
+          </div>
+          <div class="info-section mt-4 d-flex">
+            <div>
+              <p class="pe-3">Total price: </p>
+            </div>
+            <div class="mx-1">
+              <%= ((booking.start_time.to_i - booking.end_time.to_i) / -86400) * booking.product.price %> ¥
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-actions">
+        <% if booking.pending? && current_user != booking.user %>
+          <%= simple_form_for booking do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: :accepted} %>
+            <%= f.submit 'Accept', class: 'btn btn-primary m-3' %>
+          <% end %>
+          <%= simple_form_for booking do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: :rejected} %>
+            <%= f.submit 'Reject', class: 'btn btn-outline-info m-3' %>
+          <% end %>
+        <% else %>
+          <p class='booking-tag'><%= booking.status %> </p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!--   <h1>My Gear</h1>
+      <%#= render 'gear_card', bookings: @bookings %> -->

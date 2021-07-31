@@ -1,0 +1,37 @@
+// $button: #3e3e3f;
+// $button-hover: #565657;
+
+.booking-btn {
+  position: relative;
+  display: inline-block;
+  color: white;
+  background-color: #565657;
+  border: none;
+  border-radius: 0;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.0625rem;
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #898989;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+}

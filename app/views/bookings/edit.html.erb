@@ -1,0 +1,10 @@
+<%#= render "form", booking: @booking %>
+
+<%= simple_form_for(booking) do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.input :status %>
+  <%= f.input :date_start %>
+  <%= f.input :date_end %>
+  <%= f.submit %>
+<% end %>

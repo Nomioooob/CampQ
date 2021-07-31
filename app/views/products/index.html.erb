@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+
+    <div class="content">
+      <section>
+        <div style="display: flex;">
+          <h3>Filter</h3>
+          <button id="filter" type="button" data-toggle="collapse" data-target=".btns-filter"><i class="icon fas fa-chevron-down"></i></button>
+        </div>
+        <div class="btns-filter-section">
+          <button class="btns-filter" data-toggle="collapse" data-target="#price-range">Price</button>
+            <div class="slidecontainer">
+              <span class="value">Value:</span><input id="price-range" class="slider"  type="range" min="1" max="100" value="50">
+            </div>
+          <button class="btns-filter"  data-toggle="collapse" data-target="#rating-range">Rating</button>
+          <div class="slidecontainer">
+              <input id="rating-range" class="slider" type="range" min="1" max="100" value="50">
+            </div>
+          <button class="btns-filter" data-toggle="collapse" data-target="#location-range">Location</button>
+          <div class="slidecontainer">
+              <input id="location-range" class="slider"  type="range" min="1" max="100" value="50">
+            </div>
+        </div>
+      </section>
+      <% if @query %>
+        <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
+      <% end %>
+        <h3>Showing <%= @products.count %> products</h3>
+        <section class="cards">
+          <% @products.each do |product| %>
+              <div class="card-trip">
+                <%= link_to product_path(product) do %>
+                <%= cl_image_tag product.photos[1].key, width: 100 %>
+                <% end %>
+                <div class="card-trip-infos">
+                 <div style="display: ;">
+                   <figcaption><%= link_to product.name, product_path(product) %></figcaption>
+                   <figcaption><strong>$<%= product.price %></strong></figcaption>
+                 </div>
+                </div>
+              </div>
+          <% end %>
+        </section>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    const collapse_button = document.querySelector('#filter');
+    const collapse_icon = document.querySelector('.icon');
+
+    collapse_button.addEventListener("click", (event) => {
+        if (collapse_icon.classList.contains('fa-chevron-down')) {
+            collapse_icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+            collapse_icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        };
+    });
+
+    const slider = document.querySelector(".slider");
+    console.log(slider.value);
+    const span = document.querySelector(".value");
+    console.log(span);
+    span.innerText = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      span.innerHTML = this.value;
+    }
+
+</script>

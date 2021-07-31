@@ -1,0 +1,59 @@
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+
+  .booking-left {
+    display: flex;
+    align-items: center;
+
+    .product-picture {
+      height: 200px;
+      width: 250px;
+      background-image: cover;
+    }
+  }
+
+  .booking-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .booking-tag {
+    margin: 1px 4px;
+    padding: 10px 15px;
+    background-color: #565657;
+    color: white;
+    font-weight: lighter;
+    font-size: 12px;
+  }
+  .product-picture {
+    height: 200px;
+  }
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  line-height: 80%;
+
+  .booking-info-details {
+    font-weight: bolder;
+    font-size: 1.2em;
+
+    .info-section {
+      line-height: 40%;
+      padding: 20px 0px;
+    }
+  }
+
+  .booking-info-small {
+    font-size: x-small;
+  }
+
+  .booking-info-time {
+    font-weight: lighter;
+  }
+}

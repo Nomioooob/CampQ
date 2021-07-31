@@ -1,0 +1,8 @@
+<%= simple_form_for product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :category, collection: ["Tent", "Camp Kitchen", "Sleeping Bags", "Hammocks"], prompt: 'Select category', label: false %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "Upload picture(s) of your product" %>
+  <%= f.submit "Create a new item", class: 'add-to-cart w-100' %>
+<% end %>

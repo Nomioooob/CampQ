@@ -1,0 +1,22 @@
+#details {
+  background-color: rgba(1,1,1,0.8);
+  padding-top: 20px;
+  padding-left: 20px;
+  display: none;
+  width:100%;
+  height: 180px;
+  vertical-align: center;
+  transition: 5s ease-in-out;
+}
+
+.img-profile {
+  position:relative;
+}
+
+span:hover + #details {
+  transition: 2s;
+  position:absolute;
+  display: block;
+  overflow:hidden;
+  bottom: 0px;
+}
