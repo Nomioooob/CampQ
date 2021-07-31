@@ -1,7 +1,45 @@
 .cards {
-    display: grid;
+  display: inline-flex;
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 128px;
+  margin-top: 32px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .card-category {
@@ -18,22 +56,20 @@
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-.product-card img {
+.cards img {
   height: 100%;
   width: 400px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.product-cards{
-  display: inline-flex;
-  gap: 4rem;
-}
 
 .card-trip > img {
   height: 300px;
   width: 300px;
   object-fit: cover;
   display: grid;
+  border-radius: 8px;
 }
 
 .card-trip h2 {
@@ -50,7 +86,7 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
