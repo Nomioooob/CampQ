@@ -7,6 +7,59 @@
     contain: content;
     margin-left: auto;
     margin-right: auto;
+    .about{
+        display: flex;
+        height: 30vh;
+        margin-top: 15rem;
+    }
+    
+    .about-section{
+        line-height: 35px;
+    }
+    
+    #about-camps{
+        margin-left: 50px;
+    }
+    
+    #popular-content{
+        background-color: #ede1b5;
+        justify-content: center;
+        margin-bottom: 10rem;
+        margin-top: -5rem;
+        .popular{
+            padding: 20rem;
+            margin-top: -20rem;
+        }
+        
+        #popular-header{
+            text-align: center;
+            margin-top: 12rem;
+        }
+    }
+    
+    .reviews{
+        display: flex;
+        ul{
+            line-height: 30px;
+        }
+    }
+    
+    .search{
+        text-align: center;
+        background-image: url(https://i.redd.it/6uihp6cqi0h61.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 90vh;
+        #search-header, #browse-btn{
+            position: relative;
+            top: 50%;;
+        }
+        #search-header{
+            color: white;
+            padding: 2rem;
+        }
+    }
 }
 
 .product-content{

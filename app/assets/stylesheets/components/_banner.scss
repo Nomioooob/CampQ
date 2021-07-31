@@ -1,6 +1,11 @@
 .banner{
   height: 100vh;
   padding: 230px 0;
+  
+  .row{
+    padding: 10px;
+    display: block;
+  }
 
   h1,h3{
     position: absolute;
@@ -20,4 +25,8 @@
     font-size: 20px;
     color: white;
   }
+}
+
+.banner, .container{
+  scroll-behavior: smooth;
 }
