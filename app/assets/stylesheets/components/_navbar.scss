@@ -10,6 +10,11 @@
     flex-basis: auto;
     gap: 15px;
   }
+
+  // Removes the bullet points
+  .nav-item{
+    list-style: none;
+  }
   
   // This is the drop down menu for Locations
   #dropdownMenuButton{

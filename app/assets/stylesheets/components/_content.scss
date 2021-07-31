@@ -1,5 +1,15 @@
 .content{
-    // height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    contain: content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-content{
     overflow: hidden;
     scroll-snap-align: start;
     margin-top: 5rem;
