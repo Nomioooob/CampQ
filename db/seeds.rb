@@ -9,7 +9,7 @@ nomin = User.create!(
   password: "111111",
   first_name: "Nomin",
   last_name: "Batsaikhan",
-  location: "Japan",
+  location: "2-11-3 Meguro, Meguro City, Tokyo",
   picture: "https://kitt.lewagon.com/placeholder/users/Nomioooob"
 
 )
@@ -19,7 +19,7 @@ aidan = User.create!(
   password: "111111",
   first_name: "Aidan",
   last_name: "Fournier",
-  location: "Japan",
+  location: "1-1 Chiyoda, Chiyoda City, Tokyo",
   picture: "https://kitt.lewagon.com/placeholder/users/AidanFournier"
 )
 
@@ -28,7 +28,7 @@ sasha = User.create!(
   password: "111111",
   first_name: "Sasha",
   last_name: "Kaverina",
-  location: "Japan",
+  location: "2-1 Chiyoda, Chiyoda City, Tokyo",
   picture: "https://kitt.lewagon.com/placeholder/users/sashakaverina"
 )
 
@@ -37,7 +37,7 @@ shogo = User.create!(
   password: "111111",
   first_name: "Shogo",
   last_name: "Miyagi",
-  location: "Japan",
+  location: "Tokyo, Shibuya City, Shibuya, 3−21−3",
   picture: "https://kitt.lewagon.com/placeholder/users/80andAbove"
 )
 

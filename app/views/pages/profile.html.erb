@@ -1,60 +1,56 @@
  <div class="container py-3">
     <ul class="nav tabs-underlined" id="myTab" role="tablist">
+      <!-- my profile -->
       <li class="nav-item" role="presentation">
-        <a class="active tab-underlined" id="home-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">My profile</a>
+        <a class="active tab-underlined" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">My profile</a>
       </li>
+      <!-- my rentals -->
       <li class="nav-item" role="presentation">
-        <a class="tab-underlined" id="home-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Requests</a>
+        <a class="tab-underlined" id="rentals-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="my_rentals" aria-selected="false">My rentals</a>
       </li>
+      <!-- requests -->
       <li class="nav-item" role="presentation">
-        <a class="tab-underlined" id="profile-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">My rentals</a>
+        <a class="tab-underlined" id="requests-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Requests</a>
       </li>
+      <!-- my listings -->
        <li class="nav-item" role="presentation">
-        <a class="tab-underlined" id="list-tab" data-toggle="tab" href="#lists" role="tab" aria-controls="profile" aria-selected="false">My posts</a>
+        <a class="tab-underlined" id="listings-tab" data-toggle="tab" href="#lists" role="tab" aria-controls="profile" aria-selected="false">My listings</a>
       </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="profile-tab">
-        <h1 class="m-3">My profile</h1>
 
+    <div class="tab-content" id="myTabContent">
+      <!-- my profile -->
+      <div class="tab-pane fade py-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="d-flex justify-content-between mt-5">
+          <div>
+            <%= render 'profile_tab', user: @user %>
+
+          </div>
+          <div>
+            <%= render 'profile_calendar', bookings: @bookings, rental_bookings: @rental_bookings %>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade py-3 show active" id="bookings" role="tabpanel" aria-labelledby="home-tab">
+
+      <!-- my rentals -->
+      <div class="tab-pane fade py-3 show active" id="bookings" role="tabpanel" aria-labelledby="rentals-tab">
         <h1 class="m-3">Requests</h1>
 
         <%= render 'gear_card', bookings: @bookings %>
 
       </div>
-      <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="requests-tab">
         <h1 class="m-3">My rentals</h1>
 
         <%= render 'gear_card', bookings: @rental_bookings %>
       </div>
-      <div class="tab-pane fade py-3" id="lists" role="tabpanel" aria-labelledby="list-tab">
+      <div class="tab-pane fade py-3" id="lists" role="tabpanel" aria-labelledby="listings-tab">
         <h1 class="m-3">My posts</h1>
 
         <h2 class="m-3">No products listed. Create your first post by clicking on the button in the top right corner.</h2>
 
       </div>
     </div>
-
- <h1>Bookings calendar</h1>
-
-    <div>
-     <%= month_calendar(events: @bookings+@rental_bookings, attribute: :start_time, end_attribute: :end_time) do |date, bookings| %>
-                <%= date %>
-                <% bookings.each do |booking| %>
-                  <div class="booking-profile-calendar">
-                    <p><%= booking.product.name %></p>
-                  </div>
-                <% end %>
-              <% end %>
-    </div>
-  </div>
-
-
-
-
-
  </div>
 
 

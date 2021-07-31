@@ -1,6 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="product-content">
+<div class="d-flex">
+  <div class="container map-product-cards">
+    <div class="content mt-0">
+      <%# <section>
+        <div style="display: flex;">
+          <h3>Filter</h3>
+          <button id="filter" type="button" data-toggle="collapse" data-target=".btns-filter"><i class="icon fas fa-chevron-down"></i></button>
+        </div>
+        <div class="btns-filter-section">
+          <button class="btns-filter" data-toggle="collapse" data-target="#price-range">Price</button>
+            <div class="slidecontainer">
+              <span class="value">Value:</span><input id="price-range" class="slider"  type="range" min="1" max="100" value="50">
+            </div>
+          <button class="btns-filter"  data-toggle="collapse" data-target="#rating-range">Rating</button>
+          <div class="slidecontainer">
+              <input id="rating-range" class="slider" type="range" min="1" max="100" value="50">
+            </div>
+          <button class="btns-filter" data-toggle="collapse" data-target="#location-range">Location</button>
+          <div class="slidecontainer">
+              <input id="location-range" class="slider"  type="range" min="1" max="100" value="50">
+            </div>
+        </div>
+      </section> %>
+      
       <% if @query %>
         <h3>You searched for <span style="color:#CF0021;"><strong><%= @query %></strong></span> . <br>We found <span style="color:#CF0021;"><strong> <%= @products.count == 1 ? "1 product" : "#{@products.count} products" %></strong></span> out of <%= Product.count %></h3>
       <% end %>
@@ -22,9 +43,16 @@
       </section>
     </div>
   </div>
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+</div>
 </div>
 
-<script>
+<!-- <script>
 
     const collapse_button = document.querySelector('#filter');
     const collapse_icon = document.querySelector('.icon');
@@ -48,4 +76,4 @@
       span.innerHTML = this.value;
     }
 
-</script>
+</script> -->
