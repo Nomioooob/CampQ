@@ -8,10 +8,17 @@ class ProductsController < ApplicationController
       @query = params[:query]
       # @products = policy_scope(Product.where("name LIKE ?", "%#{params[:query]}%"))
       @products = Product.search_by_name(@query)
+
     else
       @products = policy_scope(Product)
-      # @products = Product.all
     end
+
+     @markers = @products.map do |product|
+      {
+        lat: product.user.latitude,
+        lng: product.user.longitude
+      }
+     end
   end
 
   def show
