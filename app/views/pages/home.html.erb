@@ -24,23 +24,18 @@
                 </div>
             </div>
         </section>
-        <section class="content" id="popular-content">
-            <div class="popular">
-                <h3 id="popular-header">Most Popular Camping Items</h3>
-                    <div class="cards" id="popular-cards">
-                        <div class="card-category">
-                            Tent
-                        </div>
-                        <div class="card-category">
-                            Boots
-                        </div>
-                        <div class="card-category">
-                            Axel
-                        </div>
-                    </div>
-                <%# @products.each |product| do %>
-                    <%#= product.name %>
-                <%# end %>
+        <section class="container">
+
+          <h3 id="popular-headerx">Most Popular Camping Items</h3>
+
+            <div class="owl-carousel owl-theme mt-3">
+              <% @products.each do |product| %>
+              <%= link_to product_path(product) do %>
+                <%= render 'popular-card', product: product %>
+                <% end %>
+              <% end %>
+            </div>
+        </section>
             </div>
         </section>
         <section class="content">

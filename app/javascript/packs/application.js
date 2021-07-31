@@ -30,11 +30,14 @@ import { activateImage } from '../components/active_image';
 import { initFlatpickr } from "../plugins/flatpickr";
 // import { dropdownMenu } from "../components/dropdown_menu";
 import { initMapbox } from '../plugins/init_mapbox';
+import { owlCarousel } from "../components/owl"
+
 
 document.addEventListener('turbolinks:load', () => {
   activateImage();
   initFlatpickr();
   initMapbox();
+  owlCarousel();
 });
 
 
