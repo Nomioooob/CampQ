@@ -28,12 +28,14 @@ import "bootstrap";
 // Internal imports, e.g:
 import { activateImage } from '../components/active_image';
 import { initFlatpickr } from "../plugins/flatpickr";
+import { totalPrice } from '../components/total_price';
 // import { dropdownMenu } from "../components/dropdown_menu";
 import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   activateImage();
   initFlatpickr();
+  totalPrice();
   initMapbox();
 });
 

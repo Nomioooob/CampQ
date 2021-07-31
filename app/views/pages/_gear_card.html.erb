@@ -24,7 +24,11 @@
               <p class="pe-3">Total price: </p>
             </div>
             <div class="mx-1">
-              <%= ((booking.start_time.to_i - booking.end_time.to_i) / -86400) * booking.product.price %> ¥
+              <% if (booking.start_time.to_i - booking.end_time.to_i) > -86400 %>
+                <%= booking.product.price %> ¥
+              <% else %>
+                <%= ((booking.start_time.to_i - booking.end_time.to_i) / -86400) * booking.product.price %> ¥
+              <% end %>
             </div>
           </div>
         </div>
