@@ -28,7 +28,7 @@ import "bootstrap";
 // Internal imports, e.g:
 import { activateImage } from '../components/active_image';
 import { initFlatpickr } from "../plugins/flatpickr";
-import { dropdownMenu } from "../components/dropdown_menu";
+// import { dropdownMenu } from "../components/dropdown_menu";
 
 document.addEventListener('turbolinks:load', () => {
   activateImage();
