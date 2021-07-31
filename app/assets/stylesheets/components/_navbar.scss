@@ -2,34 +2,27 @@
   display: flex;
   transition: background-color 200ms linear;
   background-color: 	#A9A9A9;
+  
+  .nav-btn-item{
+    gap: 15px;
+  }
+
+  .navbar-expand-lg, .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    gap: 15px;
+  }
+  
+  #dropdownMenuButton{
+    background-color: white !important;
+    border: none !important;
+    color: inherit;
+  }
+  
+  #nav-logo {
+    max-width: 74px;
+    height: auto;
+  }
 }
 
-.nav-btn-item{
-  display: flex;
-  gap: 15px;
-}
 
-.nav-item{
-  justify-content: space-between;
-}
-
-.navbar-expand-lg .navbar-collapse {
-  display: flex !important;
-  flex-basis: auto;
-  gap: 15px;
-}
-
-.mr-sm-5, .mx-sm-5 {
-  margin-right: 2px !important;
-}
-
-#dropdownMenuButton{
-  background-color: white !important;
-  border: none !important;
-  color: inherit;
-}
-
-#nav-logo {
-  max-width: 74px;
-  height: auto;
-}
