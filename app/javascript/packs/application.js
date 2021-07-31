@@ -35,7 +35,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   activateImage();
   initFlatpickr();
-  totalPrice();
+  if (document.querySelector("#booking_start_time")){
+    totalPrice();
+  };
   initMapbox();
 });
 
