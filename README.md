@@ -1,15 +1,12 @@
-# ![icons8-safety-care-25](https://user-images.githubusercontent.com/78288118/132427946-8b75ba2b-96b0-45b5-aeb6-fa0af4762e52.png) Justice
+# ![output-onlinepngtools](https://user-images.githubusercontent.com/78288118/132431484-3d7ecff9-cbe8-4f24-adb2-3e9bef6f3650.png) CampQ
 
+Marketplace app for renting or lending camping gear.
 
-Evidence-collecting app for victims of abuse. Document incidents, create police reports in Japanese, connect with other users who have the same abuser.
-
-
-
-![Homescreen](https://user-images.githubusercontent.com/78288118/132426048-3ce4691c-620f-4a11-b714-9b9fdb0681bc.jpg) ![241631834_604907540681684_1019720436111268722_n](https://user-images.githubusercontent.com/78288118/132426258-9ed8b986-6caf-429a-843a-1a52e10d4ab3.jpg) ![241573006_1219255375221317_3097282583302976208_n](https://user-images.githubusercontent.com/78288118/132426496-0502caf4-8ad9-4e20-b75a-1096402b294a.jpg) ![241632540_892793827986829_2787164339891048150_n](https://user-images.githubusercontent.com/78288118/132426347-4441c613-196f-4321-bfb2-f962f1176f8b.jpg)
-
+<img width="394" alt="Screen Shot 2021-09-08 at 10 03 13 AM" src="https://user-images.githubusercontent.com/78288118/132431692-b20c9362-a0da-4f1b-8191-7ae8f01598ce.png"> <img width="378" alt="Screen Shot 2021-09-08 at 10 05 15 AM" src="https://user-images.githubusercontent.com/78288118/132432294-57654fe4-f31f-429f-9f8f-4ac29cb38d99.png">
 
 <br>
-App home: https://www.wearejustice.life/
+App home: https://campq.herokuapp.com/
+
    
 
 ## Getting Started
@@ -32,10 +29,7 @@ touch .env
 Inside `.env`, set these variables. For any APIs, see group Slack channel.
 ```
 CLOUDINARY_URL=your_own_cloudinary_url_key
-API_KEY=your_own_api_key
-GMAIL_ADDRESS=team_email_address
-GMAIL_APP_PASSWORD=team_app_password
-ACTION_MAILER_HOST_URL=host_url
+MAPBOX_API_KEY=your_own_mapbox_api_key
 ```
 
 ### DB Setup
@@ -59,7 +53,7 @@ rails s
 - [Figma](https://www.figma.com) — Prototyping
 
 ## Acknowledgements
-Inspired by victims of abuse who have lacked the resources to hold their abusers accountable.
+Inspired by a love of camping.
 
 ## Team Members
 - [Nomin Batsaikhan](https://www.linkedin.com/in/nmnbatsaikhan/)
